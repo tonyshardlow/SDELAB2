@@ -213,7 +213,7 @@ module SDELab2
 import NLsolve
 import ForwardDiff
 import IteratedIntegral
-export set_opt, sde_strong_solution, set_fcn, method_code
+export set_opt, sde_strong_solution, set_fcn, method_code, do_plotting
 ##########################################
 function get_increment!(x)
   x.dW[:]=sqrt(x.dt)*randn(x.m)
@@ -559,7 +559,8 @@ function do_plotting(t,y,opt)
     end
     str=opt["output_plot_type"]
     if str=="path_plot"
-      plot(t,y)
+      sel=opt["output_sel"]
+      plot(t,y[:,sel])
     elseif str=="phase_plot"
       sel=opt["output_sel"]
       plot(y[:,sel[1]], y[:,sel[2]])
