@@ -31,7 +31,8 @@ end
 #
 function diff_g_mat(u,dw,sigma)
   d=length(dw)
-  return   [sigma*dw;zeros(d)]
+  Q=sqrt(d+1) # orthognoal matrix does not change distribution
+  return   [sigma*Q*dw;zeros(d)]
 end
 #
 function diff_g_vecs(sig,m)
