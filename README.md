@@ -74,5 +74,5 @@ opt can be further adjusted to set
 
 SDELab2 depends on the Julia packages `NLsolve` and `PyPlot`.  
 
-The package is currently being refined. The four examples presented (geometric brownian motion, van der pol, FitzHugh-Nagumo PDE, and Hodkin-Huxley) illustrate its use.
+The package is currently being refined. The four examples presented (geometric Brownian motion, Van der Pol, FitzHugh-Nagumo PDE, and Hodkin-Huxley) illustrate its use.
 
