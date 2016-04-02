@@ -1,5 +1,5 @@
-include("sdelab.jl")
-using SDELab2
+using SDELab2 # SDELab2.jl should be findable via LOAD_PATH
+println("run_HH.jl")
 #
 # Hodgkin-Huxley example from
 # H. Alzubaidi and T. Shardlow. Numerical simulations of SDEs and SPDEs.
@@ -63,6 +63,7 @@ opt["do_plotting"]=true
 opt["output_plot_type"]="path_plot"
 opt["output_sel"]=[1,2]
 #using PyPlot
+println("Start sde_strong_soln")
 tic();t,y,W=sde_strong_solution(fcn, linspace(t0,tf,100), y0, opt);run_time=toc()
 
 

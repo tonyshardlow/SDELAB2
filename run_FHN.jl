@@ -1,7 +1,10 @@
-include("sdelab.jl")
-using SDELab2
+#push!(LOAD_PATH,utf8("T:\\Research\\sdelap") )
+using SDELab2 # SDELab2.jl should be findable via LOAD_PATH
+println("run_FHN.jl")
+
 #
 # FitzHugh-Nagumo example from
+#
 # H. Alzubaidi and T. Shardlow. Numerical simulations of SDEs and SPDEs.
 # In: Stochastic Methods in Neuroscience. Ed. by C. Laing and G. Lord. OUP,
 # 2009. Chap. 12, pp. 344–366.
@@ -64,6 +67,7 @@ opt["do_plotting"]=true
 opt["output_plot_type"]="path_plot"
 opt["output_sel"]=1:d
 using PyPlot
+println("Start sde_strong_soln")
 tic();t,y,W=sde_strong_solution(fcn, linspace(t0,tf,100), y0, opt);run_time=toc()
 
 #

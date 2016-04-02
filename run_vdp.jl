@@ -1,6 +1,5 @@
-include("sdelab.jl")
-using SDELab2
-
+using SDELab2 # SDELab2.jl should be findable via LOAD_PATH
+println("run_vdp.jl")
 function drift_f(u,p)
   return [u[2], p["alpha"]*u[1]+p["beta"]*u[2]-p["A"]*u[1]^3-p["B"]*u[1]^2*u[2]]
 end
@@ -38,7 +37,8 @@ opt["do_plotting"]=true
 opt["output_plot_type"]="phase_plot"
 opt["output_sel"]=[1,2]
 #using PyPlot
+println("Start sde_strong_soln")
 tic();t,y,W=sde_strong_solution(fcn, linspace(t0,tf,10000), u, opt);run_time=toc()
-print("Run time ", run_time, " secs") #1.814, 1.851, 1.821 secs
+
 
 #

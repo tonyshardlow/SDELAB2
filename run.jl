@@ -1,5 +1,5 @@
-include("sdelab.jl")
-using SDELab2
+using SDELab2 # SDELab2.jl should be findable via LOAD_PATH
+println("run.jl")
 
 function drift_f(u,r)
   return (r*u)

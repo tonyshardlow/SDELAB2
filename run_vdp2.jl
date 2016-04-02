@@ -1,6 +1,5 @@
-include("sdelab.jl")
-using SDELab2
-
+using SDELab2 # SDELab2.jl should be findable via LOAD_PATH
+println("run_vdp2.jl")
 type vdp_param
   alpha
   beta
@@ -41,7 +40,7 @@ opt["do_plotting"]=true
 opt["output_plot_type"]="phase_plot"
 opt["output_sel"]=[1,2]
 #using PyPlot
-
+println("Start sde_strong_soln")
 tic(); t,y,W=sde_strong_solution(fcn, linspace(t0,tf,10000), u, opt); run_time=toc()
-print("Run time", run_time, "secs") # 1.774, 1.774, 1.768 secs
+
 #
