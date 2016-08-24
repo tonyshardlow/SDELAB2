@@ -58,7 +58,7 @@ dt_vals=[0.01,0.005,0.002,0.001,0.0005,1e-4]
 error=similar(dt_vals)
 all_error=Dict()
 M=10
-for key in keys(method_code)
+for key in keys(SDELab2.method_code)
   print("Integrator:", method_code[key])
   for i in 1:length(dt_vals)
     sum=0

@@ -26,6 +26,7 @@ p["beta"]=0.1
 p["A"]=1.
 p["B"]=1.
 sig=0.1
+
 # initial data
 u=[0.,0.001]
 t0=0
