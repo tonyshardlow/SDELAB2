@@ -378,7 +378,7 @@ function no_Gauss_points(m_old,dt,t_remaining,params)
     else
       lldt_term=log((8*params["length_scale"]^2)*ldt)
     end
-    lt_r=0.*abs(log(t_remaining))
+    lt_r=(0.0)*abs(log(t_remaining))
     if params["skiphalf"]==true
       order1=order+0.5
     else
